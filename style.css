@@ -1,0 +1,29 @@
+.flex-container {
+  display: flex;
+  justify-content: center; /* Center children horizontally */
+  align-items: center; /* Align children vertically in the center, if you also want vertical centering */
+  min-height: 100vh; /* Optional: Full viewport height */
+}
+
+/* Style for the flex item containing the tweet */
+.flex-item {
+  /* Ensures the item is only as wide as its content up to a max width */
+  max-width: 100%; /* Prevents the item from exceeding the width of its container */
+  box-sizing: border-box; /* Ensures padding and border are included in the width calculation */
+  padding: 20px; /* Optional: Adds some spacing around the tweet */
+}
+
+/* Responsive design adjustments */
+@media (min-width: 600px) {
+  .flex-item {
+    max-width: 80%; /* Adjusts max width for larger screens */
+  }
+}
+
+/* Additional styling to ensure the tweet iframe (loaded by Twitter's script) is responsive */
+.twitter-tweet {
+  display: block; /* Treats the tweet as a block element */
+  margin-left: auto; /* Centers the tweet by auto-adjusting the left margin */
+  margin-right: auto; /* Centers the tweet by auto-adjusting the right margin */
+  max-width: 100%; /* Ensures the tweet doesn't overflow its container */
+}
